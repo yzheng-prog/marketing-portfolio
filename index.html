@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ye Zheng - Marketing Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mobile-first.css">
+</head>
+<body>
+    <!-- Navigation - Simplified -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Streamlined -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Marketing Strategist Who Delivers Results</h1>
+                <p class="hero-intro">Certified Scrum Master with 70+ paid media campaigns. I turn marketing strategies into measurable ROI through end-to-end campaign optimization, data-driven decision making, and cross-industry expertise.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <strong>70+</strong>
+                        <span>Campaigns Managed</span>
+                    </div>
+                    <div class="stat">
+                        <strong>5+</strong>
+                        <span>Industries</span>
+                    </div>
+                    <div class="stat">
+                        <strong>3+</strong>
+                        <span>Years Experience</span>
+                    </div>
+                </div>
+                <a href="#contact" class="cta-button">Let's Connect</a>
+            </div>
+            <div class="hero-right mobile-hide">
+                <div class="headshot-container">
+                    <img src="headshot.jpg" alt="Ye Zheng - Professional Headshot">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section - Condensed -->
+    <section id="about" class="section mobile-about">
+        <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>About</h2>
+        </div>
+
+        <div class="about-condensed">
+            <p class="about-lead">I bridge strategy and execution across FMCG, eCommerce, B2B, and tech industries.</p>
+            
+            <div class="key-strengths">
+                <div class="strength-item">
+                    <h3>🎯 Strategic Execution</h3>
+                    <p>Certified Scrum Master combining Agile project management with hands-on digital marketing execution.</p>
+                </div>
+                
+                <div class="strength-item">
+                    <h3>📊 Data-Driven Results</h3>
+                    <p>70+ campaigns with measurable ROI improvements through conversion tracking and performance optimization.</p>
+                </div>
+                
+                <div class="strength-item">
+                    <h3>🌐 Cross-Industry Edge</h3>
+                    <p>Experience across McDonald's, Pepsi, Unilever, plus eCommerce and B2B - insights that outperform single-industry specialists.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Collapsible Detailed About -->
+        <div class="detailed-about mobile-collapsible">
+            <button class="expand-btn" onclick="toggleSection('detailed-about')">
+                <span>View Full Background</span>
+                <span class="expand-icon">+</span>
+            </button>
+            <div class="collapsible-content" id="detailed-about">
+                <p>My journey started in marketing intelligence at Fordham University, where I discovered my passion for turning data into stories and strategies into results. Since then, I've executed campaigns across FMCG (McDonald's, Pepsi, Unilever, Kimberly-Clark), eCommerce, retail, B2B, and regulated industries—managing 70+ paid media projects and consistently delivering above-target performance.</p>
+
+                <div class="approach-pillars mobile-stack">
+                    <div class="pillar">
+                        <h4>Customer Journey Optimization</h4>
+                        <p>Seamless experiences from keyword intent to conversion, eliminating friction at every touchpoint.</p>
+                    </div>
+
+                    <div class="pillar">
+                        <h4>Strategic Account Architecture</h4>
+                        <p>Campaign structures that prevent cannibalization and map to the full marketing funnel.</p>
+                    </div>
+
+                    <div class="pillar">
+                        <h4>Data Integrity & Performance Tracking</h4>
+                        <p>Robust conversion tracking with backend validation to ensure metrics reflect true business impact.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects - Top 3 Only -->
+    <section id="projects" class="section">
+        <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>Featured Projects</h2>
+        </div>
+
+        <div class="projects-mobile">
+            <!-- Project 1: B2B Data SaaS -->
+            <div class="project-card-mobile" data-project="0">
+                <div class="project-header">
+                    <span class="industry-tag">B2B / Data SaaS</span>
+                    <h3>Value-Based Bidding & CRM Integration</h3>
+                </div>
+                <div class="project-metrics-mobile">
+                    <div class="metric">
+                        <span class="metric-value">-25%</span>
+                        <span class="metric-label">CPA</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">+32%</span>
+                        <span class="metric-label">Qualified Conversions</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">+20%</span>
+                        <span class="metric-label">Budget Increase</span>
+                    </div>
+                </div>
+                <p class="project-summary">Transformed a 2018-era Google Ads account into a profit engine by implementing Value-Based Bidding and HubSpot integration, training the algorithm to target decision-makers with active budgets instead of form fillers.</p>
+                <button class="view-details-btn" onclick="openModal(0)">View Full Case Study</button>
+            </div>
+
+            <!-- Project 2: E-Commerce -->
+            <div class="project-card-mobile" data-project="1">
+                <div class="project-header">
+                    <span class="industry-tag">eCommerce / Sporting Goods</span>
+                    <h3>Q4 Holiday Scale Strategy</h3>
+                </div>
+                <div class="project-metrics-mobile">
+                    <div class="metric">
+                        <span class="metric-value">10.82</span>
+                        <span class="metric-label">ROAS</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">+313%</span>
+                        <span class="metric-label">Conversion Value</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">$5.81</span>
+                        <span class="metric-label">CPA</span>
+                    </div>
+                </div>
+                <p class="project-summary">Scaled eCommerce volume 3x during Black Friday using Custom Label architecture and inventory-based bidding strategies, while maintaining stable CPAs despite holiday auction pressure.</p>
+                <button class="view-details-btn" onclick="openModal(1)">View Full Case Study</button>
+            </div>
+
+            <!-- Project 3: McDonald's -->
+            <div class="project-card-mobile" data-project="4">
+                <div class="project-header">
+                    <span class="industry-tag">FMCG / Global Brand</span>
+                    <h3>McDonald's Global Flavor Launch</h3>
+                </div>
+                <div class="project-metrics-mobile">
+                    <div class="metric">
+                        <span class="metric-value">9.9B</span>
+                        <span class="metric-label">Views</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">790K+</span>
+                        <span class="metric-label">Discussions</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-value">99%</span>
+                        <span class="metric-label">On-Time</span>
+                    </div>
+                </div>
+                <p class="project-summary">Orchestrated 50+ influencer campaign with custom tech integration, connecting social engagement to WeChat Mini-Program transactions for direct revenue measurement.</p>
+                <button class="view-details-btn" onclick="openModal(4)">View Full Case Study</button>
+            </div>
+        </div>
+
+        <!-- More Projects Collapsible -->
+        <div class="more-projects mobile-collapsible">
+            <button class="expand-btn" onclick="toggleSection('more-projects')">
+                <span>View More Projects</span>
+                <span class="expand-icon">+</span>
+            </button>
+            <div class="collapsible-content" id="more-projects">
+                <div class="additional-projects">
+                    <div class="project-summary-card">
+                        <h4>Wildlife Removal Services</h4>
+                        <p><strong>Local Services:</strong> +60% CVR, +64% Search CTR through strategic repositioning from commodity pest control to premium exclusion services.</p>
+                    </div>
+                    <div class="project-summary-card">
+                        <h4>VosynVerse AI Agile Transformation</h4>
+                        <p><strong>Tech/AI:</strong> Led marketing team through Agile transformation, resulting in 20% productivity increase and 15% faster delivery times.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills - Condensed -->
+    <section id="skills" class="section mobile-skills">
+        <div class="section-header">
+            <span class="section-number">03</span>
+            <h2>Core Capabilities</h2>
+        </div>
+
+        <div class="skills-grid-mobile">
+            <div class="skill-category">
+                <h3>Strategic Planning</h3>
+                <ul>
+                    <li>Customer Journey Optimization</li>
+                    <li>Cross-Industry Insights</li>
+                    <li>Account Architecture Design</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Execution & Management</h3>
+                <ul>
+                    <li>Agile Project Management (CSM)</li>
+                    <li>Stakeholder Coordination</li>
+                    <li>Team Leadership</li>
+                </ul>
+            </div>
+
+            <div class="skill-category">
+                <h3>Technical Implementation</h3>
+                <ul>
+                    <li>Google Ads & Meta Optimization</li>
+                    <li>Conversion Tracking & Analytics</li>
+                    <li>Performance Measurement</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Tech Stack Collapsible -->
+        <div class="tech-stack mobile-collapsible">
+            <button class="expand-btn" onclick="toggleSection('tech-stack')">
+                <span>View Technology Stack</span>
+                <span class="expand-icon">+</span>
+            </button>
+            <div class="collapsible-content" id="tech-stack">
+                <div class="tech-categories-mobile">
+                    <div class="tech-category">
+                        <h4>Platforms</h4>
+                        <p>Google Ads, Meta Ads, TikTok Ads, Amazon Advertising</p>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Project Management</h4>
+                        <p>Jira, Asana, Smartsheet, Monday.com</p>
+                    </div>
+                    <div class="tech-category">
+                        <h4>Analytics</h4>
+                        <p>Google Analytics, Comscore, Salesforce Marketing Cloud</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section - Prominent -->
+    <section id="contact" class="section contact-section mobile-contact">
+        <div class="section-header">
+            <span class="section-number">04</span>
+            <h2>Let's Connect</h2>
+        </div>
+        <div class="contact-content-mobile">
+            <p class="contact-pitch">Ready to optimize your marketing campaigns?</p>
+            
+            <div class="contact-methods">
+                <a href="mailto:zhengye07@outlook.com" class="contact-btn primary">
+                    📧 Email Me
+                </a>
+                <a href="https://linkedin.com/in/echozhengmba" target="_blank" class="contact-btn secondary">
+                    💼 LinkedIn
+                </a>
+            </div>
+            
+            <div class="contact-info-mobile">
+                <p class="location">📍 Toronto, ON</p>
+                <p class="availability">Available for full-time opportunities</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Minimal -->
+    <footer class="mobile-footer">
+        <p>&copy; <span id="current-year"></span> Ye Zheng</p>
+    </footer>
+
+    <!-- Project Modal - Unchanged -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <button class="modal-nav modal-prev">&#8249;</button>
+            <button class="modal-nav modal-next">&#8250;</button>
+            <div class="modal-body">
+                <!-- Modal content populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Collapsible sections functionality
+        function toggleSection(sectionId) {
+            const content = document.getElementById(sectionId);
+            const btn = content.previousElementSibling.querySelector('.expand-icon');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                btn.textContent = '+';
+            } else {
+                content.style.display = 'block';
+                btn.textContent = '−';
+            }
+        }
+
+        // Update year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
