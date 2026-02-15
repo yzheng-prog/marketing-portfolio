@@ -1,0 +1,331 @@
+/* MOBILE OPTIMIZATION PATCH - Complete version with spacing fixes */
+
+/* === MOBILE RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    
+    /* HERO SECTION - Simplify for mobile */
+    .hero-left h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.2 !important;
+        margin-bottom: var(--space-md) !important;
+    }
+    
+    .hero-left p {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: var(--space-lg) !important;
+    }
+    
+    /* ABOUT SECTION - Stack content better */
+    .about-lead {
+        font-size: 1.25rem !important;
+        margin-bottom: var(--space-md) !important;
+    }
+    
+    .about-intro p {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* CARDS - Reduce padding and spacing */
+    .about-card,
+    .skill-item {
+        padding: var(--space-lg) !important;
+        margin-bottom: var(--space-md) !important;
+    }
+    
+    .about-card h3,
+    .skill-item h3 {
+        font-size: 1.1rem !important;
+        margin-bottom: var(--space-sm) !important;
+    }
+    
+    .about-card p,
+    .skill-item p {
+        font-size: 0.9rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    /* PILLARS - Stack and simplify */
+    .approach-pillars {
+        gap: var(--space-md) !important;
+    }
+    
+    .pillar {
+        padding: var(--space-md) !important;
+    }
+    
+    .pillar h4 {
+        font-size: 1rem !important;
+    }
+    
+    .pillar p {
+        font-size: 0.85rem !important;
+    }
+    
+    /* PROJECT CARDS - Simplify */
+    .project-content {
+        padding: var(--space-lg) !important;
+    }
+    
+    .project-content h3 {
+        font-size: 1.1rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: var(--space-sm) !important;
+    }
+    
+    .project-metrics {
+        font-size: 0.8rem !important;
+        margin-top: var(--space-sm) !important;
+    }
+    
+    /* SECTIONS - Reduce spacing */
+    .section {
+        padding: var(--space-xl) var(--space-md) !important;
+        margin-bottom: var(--space-md) !important;
+    }
+    
+    .section-header {
+        margin-bottom: var(--space-lg) !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: var(--space-sm) !important;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem !important;
+    }
+    
+    /* TIMELINE - Make more compact */
+    .clean-timeline-section {
+        padding: var(--space-lg) var(--space-md) !important;
+        height: auto !important;
+        min-height: 300px !important;
+    }
+    
+    .clean-timeline-container {
+        height: 200px !important;
+    }
+    
+    /* TECH STACK - Simplify */
+    .tech-stack {
+        padding: var(--space-lg) !important;
+    }
+    
+    .tech-stack h3 {
+        font-size: 1.25rem !important;
+        margin-bottom: var(--space-lg) !important;
+    }
+    
+    .tech-category h4 {
+        font-size: 0.9rem !important;
+        margin-bottom: var(--space-xs) !important;
+    }
+    
+    .tech-category p {
+        font-size: 0.8rem !important;
+    }
+    
+    /* NAVIGATION - Make touch-friendly */
+    .nav-links {
+        gap: var(--space-sm) !important;
+        justify-content: center !important;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem !important;
+        padding: var(--space-xs) var(--space-sm) !important;
+    }
+    
+    /* PROJECT FILTERS - Stack and make touch-friendly */
+    .project-filters {
+        gap: var(--space-sm) !important;
+        margin-bottom: var(--space-lg) !important;
+    }
+    
+    .filter-btn {
+        font-size: 0.8rem !important;
+        padding: var(--space-sm) var(--space-md) !important;
+    }
+    
+    /* MODAL - Full screen on mobile */
+    .modal {
+        padding: var(--space-sm) !important;
+    }
+    
+    .modal-content {
+        padding: var(--space-lg) !important;
+        max-height: 90vh !important;
+        border-radius: var(--radius-md) !important;
+    }
+    
+    .modal-title {
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .modal-section h3 {
+        font-size: 1.1rem !important;
+    }
+    
+    .modal-section p,
+    .modal-section ul {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+    }
+    
+    /* CONTACT SECTION - Simplify */
+    .contact-content p {
+        font-size: 1.1rem !important;
+    }
+    
+    .contact-subtitle {
+        font-size: 0.95rem !important;
+    }
+    
+    /* HIDE COMPLEX ELEMENTS ON SMALL SCREENS */
+    .easter-egg-hint {
+        display: none !important;
+    }
+    
+    /* Disable pixel assistant on very small screens */
+    .pixel-assistant {
+        display: none !important;
+    }
+}
+
+/* === EXTRA SMALL SCREENS (iPhone SE, small phones) === */
+@media (max-width: 480px) {
+    
+    /* Further simplify hero */
+    .hero-left h1 {
+        font-size: 1.6rem !important;
+    }
+    
+    .hero-left p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Reduce section padding more */
+    .section {
+        padding: var(--space-lg) var(--space-sm) !important;
+    }
+    
+    /* Stack navigation vertically if needed */
+    .nav-links {
+        flex-wrap: wrap !important;
+        gap: var(--space-xs) !important;
+    }
+    
+    /* Make project cards more compact */
+    .project-content {
+        padding: var(--space-md) !important;
+    }
+    
+    .project-content h3 {
+        font-size: 1rem !important;
+    }
+    
+    /* Simplify timeline further */
+    .timeline-line {
+        min-width: 700px !important;
+    }
+    
+    .point-info h4 {
+        font-size: 0.8rem !important;
+    }
+    
+    .point-info p {
+        font-size: 0.65rem !important;
+    }
+}
+
+/* === LANDSCAPE MOBILE - Special handling === */
+@media (max-width: 896px) and (orientation: landscape) {
+    .hero {
+        min-height: 70vh !important;
+    }
+    
+    .clean-timeline-section {
+        height: auto !important;
+        min-height: 250px !important;
+    }
+    
+    .clean-timeline-container {
+        height: 180px !important;
+    }
+}
+
+/* === TABLET IMPROVEMENTS === */
+@media (max-width: 1024px) and (min-width: 769px) {
+    
+    /* Optimize for tablet */
+    .hero-left h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem !important;
+    }
+    
+    /* Two column layout for about cards */
+    .about-cards {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Three column layout for skills when possible */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* === SECTION SPACING FIX (ALL DEVICES) === */
+/* Fix section spacing and alignment for consistent layout */
+.section + .section {
+    padding-top: var(--space-2xl) !important;
+    margin-bottom: var(--space-xl) !important;
+}
+
+.section-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--space-lg) !important;
+    margin-bottom: var(--space-2xl) !important;
+}
+
+/* Specific fix for timeline section spacing */
+.clean-timeline-section + .section {
+    padding-top: var(--space-3xl) !important;
+}
+
+/* Ensure consistent section header alignment */
+.section-number {
+    min-width: 50px; /* 确保数字宽度一致 */
+    text-align: left;
+}
+
+/* Additional spacing improvements */
+.section:first-of-type {
+    padding-top: var(--space-2xl) !important;
+}
+
+.section + .section {
+    padding-top: var(--space-2xl) !important;
+    margin-top: var(--space-xl) !important;
+}
+
+/* Ensure projects section has consistent spacing */
+#projects.section {
+    padding-top: var(--space-3xl) !important;
+    margin-top: var(--space-2xl) !important;
+}
+
+/* Fix any timeline-specific spacing issues */
+.clean-timeline-section {
+    margin-bottom: var(--space-2xl) !important;
+}
+
+.clean-timeline-section + #projects {
+    padding-top: var(--space-3xl) !important;
+    margin-top: var(--space-2xl) !important;
+}
