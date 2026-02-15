@@ -441,3 +441,25 @@
         align-items: center;
     }
 }
+
+/* === SECTION SPACING FIX (ALL DEVICES) === */
+.section + .section {
+    padding-top: var(--space-2xl) !important;
+    margin-bottom: var(--space-xl) !important;
+}
+
+.section-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--space-lg) !important;
+    margin-bottom: var(--space-2xl) !important;
+}
+
+.clean-timeline-section + .section {
+    padding-top: var(--space-3xl) !important;
+}
+
+.section-number {
+    min-width: 50px;
+    text-align: left;
+}
