@@ -61,7 +61,7 @@ class EasterEggManager {
     showLongVisitorMessage() {
         const assistant = window.pixelAI;
         if (assistant) {
-            assistant.showMessage("You've been here a while! This site was built with Claude Code + human creativity 🤖✨");
+            assistant.showMessage("Beep boop! I was architected with Claude Code + human creativity 🤖✨");
             assistant.jump();
         }
     }
@@ -69,7 +69,7 @@ class EasterEggManager {
     showClickMasterMessage() {
         const assistant = window.pixelAI;
         if (assistant) {
-            assistant.showMessage("Wow, you're really exploring! I like your thoroughness 🕵️‍♀️");
+            assistant.showMessage("Analyzing... Your browsing patterns suggest a high interest in growth architecture 🕵️‍♀️");
             assistant.wave();
             this.easterEggActivated = true;
         }
@@ -78,7 +78,7 @@ class EasterEggManager {
     showPersistentVisitorEgg() {
         const assistant = window.pixelAI;
         if (assistant) {
-            assistant.showMessage("Still here? You must really like this portfolio! Want to know a secret? Try the Konami Code 🎮");
+            assistant.showMessage("Scanning code... My logic gates were refined by the best AI in the game. 👾");
             assistant.assistant.classList.add('excited');
             setTimeout(() => {
                 assistant.assistant.classList.remove('excited');
@@ -93,7 +93,7 @@ class EasterEggManager {
             // Special developer mode activation
             document.body.classList.add('easter-egg-mode');
             assistant.assistant.classList.add('developer-mode');
-            assistant.showMessage("🎉 KONAMI CODE ACTIVATED! You found the secret developer mode! This portfolio was built with AI assistance 🚀");
+            assistant.showMessage("🎉 Efficiency meets strategy. This experience was optimized through AI-human collaboration! 🚀");
             
             // Special effects
             assistant.jump();
