@@ -150,11 +150,15 @@ html {
     text-decoration: none;
     opacity: 0.85;
     transition: opacity var(--duration-base) var(--ease-standard);
-    filter: invert(1); /* 白底黑字 → 反转为深色背景上的白字 */
 }
 
 .nav-logo:hover {
     opacity: 1;
+}
+
+.nav-logo img {
+    height: 28px;
+    width: auto;
 }
 
 .nav-links {
