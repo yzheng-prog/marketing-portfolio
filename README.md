@@ -1,78 +1,101 @@
-# Marketing Portfolio - Optimized Version
+# Ye Zheng — Marketing Portfolio Website
 
-## 📁 Files for GitHub Upload
+**Live Site:** [yezheng.github.io/portfolio](https://github.com/echozhengmba) · **Role:** Digital Marketing Strategist · **Stack:** Vanilla JS · CSS · HTML5 · GitHub Pages
 
-### Core Website Files:
-- `index_final.html` - Main portfolio page (rename to `index.html` for GitHub Pages)
-- `styles_optimized.css` - Main stylesheet (rename to `styles.css`)
-- `script_optimized.js` - JavaScript functionality (rename to `script.js`)
-- `mobile-optimization.css` - Mobile responsiveness (use as-is)
-- `easter-egg.css` - Fun interactive elements (use as-is)
-- `easter-egg.js` - Additional JavaScript for easter eggs (use as-is)
+---
 
-### Project Background Images:
-- `texas-records-bg.png` - B2B Data SaaS project background
-- `ledgestone-bg.png` - eCommerce Sporting Goods project background  
-- `raccoon-bg.png` - Home Services project background
-- `vosyn-bg.png` - AI Tech project background
-- `mcdonalds-bg.svg` - McDonald's CPG project background
+## What This Is
 
-### Preview Files (Optional):
-- `final-project-cards-with-screenshots.html` - Preview of project cards
-- `simplified-project-cards.html` - Original design preview
+A performance-driven personal portfolio built to do one thing well: help recruiters and hiring managers understand what I do, how I think, and what results I drive — within 60–90 seconds of landing on the page.
 
-## 🚀 GitHub Pages Deployment Steps
+This isn't just a static resume. It's a **working demonstration of AI-augmented product development** — from strategy to code to deployment — built entirely through structured collaboration between human marketing judgment and Claude AI.
 
-1. **Upload all files to your GitHub repository**
-2. **Rename core files:**
-   - `index_final.html` → `index.html`
-   - `styles_optimized.css` → `styles.css` 
-   - `script_optimized.js` → `script.js`
-3. **Enable GitHub Pages** in repository settings
-4. **Add your headshot image** as `headshot.jpg`
+---
 
-## ✅ Key Optimizations Applied
+## How It Was Built
 
-### Hero Section:
-- Simplified to 3 lines (title + 2 description lines)
-- "Let's Connect" button with hover LinkedIn/Email pills
-- Bold highlighting instead of background colors
+This project was developed through a two-layer AI collaboration workflow:
 
-### About Me:
-- Reordered metrics: 3+ → 15+ → 30+ → 120
-- Added Experience Journey visualization
-- Updated CPG clients to include Kimberly-Clark
+**Layer 1 — Strategic Thinking (Claude.ai web interface)**
+Marketing strategy, case study framing, content hierarchy, and UX logic were developed conversationally. I used Claude as a thought partner to pressure-test positioning decisions, refine the WHY/STRATEGY/ACTION/RESULT/INSIGHT framework, and ensure every section answered the question recruiters actually care about: *"So what?"*
 
-### Projects:
-- Simplified cards: image backgrounds only
-- Hover shows industry + key metric
-- Real project screenshots integrated
-- Updated McDonald's data: 790K discussions, 15K followers, 50+ influencers
-- Removed exaggerated 9.9B views metric
+**Layer 2 — Technical Execution (Claude Code in terminal)**
+Once strategy was locked, I switched to Claude Code to implement changes directly. The `CLAUDE.md` file served as the shared context layer — ensuring that regardless of which session or tool I was in, the AI maintained architectural consistency, respected established design decisions, and never drifted from the project's core logic.
 
-### Skills:
-- Restructured to 6 core capabilities
-- Added Platform Expertise with logos
-- Removed redundancy with About Me section
+> **This dual-loop workflow cut estimated development time by ~60%** while maintaining clean, framework-free code with zero technical debt.
 
-### Contact:
-- Added phone number: 647-640-5350
-- Updated copy for HR/Marketing Manager audience
+---
 
-## 🎨 Design Consistency
+## File Structure
 
-All changes maintain your original professional tech aesthetic:
-- Google Material Design dark theme
-- Blue (#4285f4) primary color
-- Clean, minimal interface
-- Smooth animations and interactions
+```
+/
+├── index.html              # Main portfolio (desktop)
+├── mobile.html             # Mobile-optimized experience
+├── styles.css              # CSS design system (variable-driven)
+├── script.js               # Core JS — project data, modal logic, interactions
+├── easter-egg.js           # Pixel AI assistant (appears at 30s)
+├── easter-egg.css          # Easter egg styles
+├── CLAUDE.md               # AI collaboration guide (architecture decisions)
+├── README.md               # This file
+│
+├── mcdonaldsbg.png         # McDonald's case study background
+├── vosynbg.png             # VosynVerse AI case study background
+├── texasrecordsbg.png      # B2B SaaS case study background
+├── ledgestonebg.png        # eCommerce case study background
+└── raccoonbg.png           # Home Services case study background
+```
 
-## 📱 Mobile Optimization
+---
 
-Fully responsive design with:
-- Simplified mobile layouts
-- Touch-friendly interactions
-- Optimized image loading
-- Consistent experience across devices
+## Project Case Studies
 
-Ready for GitHub Pages deployment! 🚀
+Each case study follows a consistent **WHY → STRATEGY → ACTION → RESULT → INSIGHT** structure — designed to mirror how senior marketers and hiring managers evaluate strategic thinking.
+
+| Project | Industry | Key Result |
+|---|---|---|
+| McDonald's Social Campaign | CPG / QSR | 790K+ social discussions, 50+ influencers managed |
+| VosynVerse AI Investor Event | AI / Tech | 44% attendance conversion rate |
+| Value-Based Bidding & CRM Integration | B2B SaaS | -25% CPA, +32% conversions |
+| eCommerce Performance Max | Sporting Goods | +82% ROAS improvement |
+| Home Services Lead Gen | Local Services | +60% CVR, -27% CPA |
+
+---
+
+## Technical Decisions
+
+**No frameworks.** Zero React, Vue, or Angular. Vanilla JavaScript was a deliberate choice — faster load, no dependency rot, direct DOM control, and a lower barrier to long-term maintenance.
+
+**Content-as-code.** All project data lives in a single structured JavaScript object (`script.js`). Updating a case study means editing a data object, not hunting through HTML. The structure is CMS-ready and TypeScript-convertible.
+
+**CSS variable-driven design system.** One source of truth for colors, spacing, and animation curves. Theming changes propagate globally from `:root`.
+
+**Modular JS.** `script.js`, `easter-egg.js` operate independently via a shared global namespace (`window.pixelAI`). Easter egg features load after critical content, never blocking render.
+
+---
+
+## What This Demonstrates (Beyond Marketing)
+
+- **AI fluency:** Structured, productive human-AI collaboration at both strategic and technical layers
+- **Systems thinking:** Architecture decisions made with long-term maintainability in mind
+- **Product ownership:** Full lifecycle from content strategy → UX logic → code → deployment
+- **Attention to UX:** Interactive easter egg, scroll animations, hover reveals — thoughtful without being gratuitous
+
+---
+
+## Deployment
+
+Hosted via **GitHub Pages** — no build step, no CI/CD overhead. Upload files, enable Pages in repo settings, done.
+
+For local preview: open `index.html` directly in any browser.
+
+---
+
+## Contact
+
+**Ye Zheng**
+Digital Marketing Strategist | MBA (Niagara) · MS Marketing Intelligence (Fordham)
+
+- LinkedIn: [linkedin.com/in/echozhengmba](https://linkedin.com/in/echozhengmba)
+- Email: zhengye07@outlook.com
+- Phone: 647-640-5350
