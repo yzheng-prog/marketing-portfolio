@@ -959,8 +959,10 @@ html {
         rgba(66, 133, 244, 0.15) 100%
     );
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;    
+    align-items: flex-end;     
+    justify-content: flex-end;   
+    text-align: right;   
     padding: var(--space-xl);
     opacity: 0;
     transition: opacity 0.4s var(--ease-standard);
