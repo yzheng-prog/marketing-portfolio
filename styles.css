@@ -2094,6 +2094,7 @@ a, button, .project-card, .timeline-node {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: flex-end; 
     padding: 1.5rem;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -2110,6 +2111,7 @@ a, button, .project-card, .timeline-node {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    text-align: right; 
 }
 
 .key-metric {
