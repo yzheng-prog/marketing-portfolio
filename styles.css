@@ -136,12 +136,30 @@ html {
     border-bottom: 1px solid var(--border-subtle);
 }
 
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity var(--duration-base) var(--ease-standard);
+    filter: invert(1); /* 白底黑字 → 反转为深色背景上的白字 */
+}
+
+.nav-logo:hover {
+    opacity: 1;
+}
+
 .nav-links {
     display: flex;
     gap: var(--space-xl);
-    justify-content: flex-end;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .nav-links a {
@@ -2561,4 +2579,51 @@ a, button, .project-card, .timeline-node {
         padding: 7px 8px;
         font-size: 0.74rem;
     }
+}
+
+/* === HERO CONTACT ICONS === */
+.hero-contact-icons {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-xl);
+    flex-wrap: wrap;
+}
+
+.hero-icon-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid transparent;
+    transition: all var(--duration-hover) var(--ease-professional);
+    cursor: pointer;
+}
+
+.hero-icon-btn.linkedin-btn {
+    background: #0077b5;
+    color: #fff;
+}
+
+.hero-icon-btn.linkedin-btn:hover {
+    background: #005f96;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 119, 181, 0.4);
+}
+
+.hero-icon-btn.email-btn {
+    background: transparent;
+    color: var(--text-primary);
+    border-color: var(--border-subtle);
+}
+
+.hero-icon-btn.email-btn:hover {
+    border-color: var(--google-blue);
+    color: var(--google-blue);
+    background: var(--google-blue-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(66, 133, 244, 0.2);
 }
