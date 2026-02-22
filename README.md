@@ -98,4 +98,3 @@ Digital Marketing Strategist | MBA (Niagara) · MS Marketing Intelligence (Fordh
 
 - LinkedIn: [linkedin.com/in/echozhengmba](https://linkedin.com/in/echozhengmba)
 - Email: zhengye07@outlook.com
-- Phone: 647-640-5350
