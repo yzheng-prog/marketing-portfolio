@@ -1,0 +1,225 @@
+/* ══════════════════════════════════════════
+   FUNNEL DIAGRAM — Investor GTM Visualization
+   Add these styles to the bottom of styles.css
+   ══════════════════════════════════════════ */
+
+/* Funnel Section Container */
+.funnel-section {
+    border-left-color: #9b59b6 !important;
+}
+
+.funnel-diagram {
+    margin-top: var(--space-lg);
+}
+
+.funnel-diagram-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-lg);
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.funnel-diagram-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.funnel-result-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(52, 168, 83, 0.1);
+    border: 1px solid rgba(52, 168, 83, 0.3);
+    color: var(--google-green);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+}
+
+/* Funnel Steps */
+.funnel-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.funnel-step {
+    animation: funnelStepIn 0.4s var(--ease-decelerate) both;
+    animation-delay: var(--step-delay, 0s);
+}
+
+@keyframes funnelStepIn {
+    from { opacity: 0; transform: translateX(-16px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+.funnel-step-inner {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-subtle);
+    border-left: 4px solid var(--step-color, #4285f4);
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
+    transition: all 0.25s var(--ease-professional);
+    position: relative;
+    overflow: hidden;
+}
+
+.funnel-step-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 60%, rgba(var(--step-color, 66, 133, 244), 0.04) 100%);
+    pointer-events: none;
+}
+
+.funnel-step-inner:hover {
+    background: var(--bg-elevated);
+    border-color: var(--border-subtle);
+    border-left-color: var(--step-color, #4285f4);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    transform: translateX(4px);
+}
+
+/* Step Head */
+.funnel-step-head {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-sm);
+}
+
+.funnel-num {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+    min-width: 28px;
+    opacity: 0.9;
+}
+
+.funnel-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.funnel-title-block {
+    flex: 1;
+}
+
+.funnel-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+.funnel-sub {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-top: 2px;
+}
+
+.funnel-metric-badge {
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border: 1.5px solid;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    background: transparent;
+    opacity: 0.9;
+}
+
+/* Step Detail & Tags */
+.funnel-detail {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: var(--space-sm);
+    padding-left: calc(28px + var(--space-md) + 1.4rem + var(--space-md));
+}
+
+.funnel-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    padding-left: calc(28px + var(--space-md) + 1.4rem + var(--space-md));
+}
+
+.funnel-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 2px 8px;
+    border: 1px solid;
+    border-radius: var(--radius-full);
+    background: transparent;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Connector arrow between steps */
+.funnel-connector {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: calc(28px + var(--space-md) + 1.4rem + var(--space-md) + 6px);
+    height: 28px;
+    position: relative;
+}
+
+.funnel-arrow-line {
+    width: 1px;
+    flex: 1;
+    background: var(--border-subtle);
+}
+
+.funnel-arrow-head {
+    font-size: 0.9rem;
+    line-height: 1;
+    opacity: 0.5;
+    margin-top: -2px;
+}
+
+/* Phase label styling in modal text */
+.phase-label {
+    display: block;
+    color: var(--google-blue);
+    font-weight: 700;
+    margin-top: var(--space-md);
+    margin-bottom: var(--space-xs);
+    font-size: 0.95rem;
+}
+
+.phase-label:first-of-type {
+    margin-top: 0;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .funnel-step-head {
+        flex-wrap: wrap;
+    }
+
+    .funnel-metric-badge {
+        margin-left: auto;
+    }
+
+    .funnel-detail,
+    .funnel-tags,
+    .funnel-connector {
+        padding-left: 0;
+    }
+
+    .funnel-diagram-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
