@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--
+  ================================================================
+  INSIGHTS ARTICLE TEMPLATE — GEO OPTIMIZED
+  ================================================================
+  HOW TO USE:
+  1. Copy this file, rename to: [issue]-[topic-slug].html
+     Example: 002-pmax-cross-industry-patterns.html
+  2. Fill every [PLACEHOLDER] — search for [ to find them all
+  3. The FRONTMATTER block is required — GitHub Actions reads it
+  4. Both JSON-LD blocks are required — AI crawlers read them
+  5. Q&A answers must stay in the DOM — never JS-inject them
+  6. Do not add inline styles — use class names from insights-styles.css
+  ================================================================
+  -->
+
+  <title>[ARTICLE TITLE] | Ye Zheng Marketing Insights</title>
+
+  <!--
+  META DESCRIPTION = DIRECT ANSWER
+  Write a complete 2-3 sentence answer to the article's core question.
+  Never start with "This article" or "In this post."
+  AI crawlers and Perplexity read this field as a primary citation source.
+  -->
+  <meta name="description" content="[2-3 sentence direct answer to the article's core question. Complete and standalone. Never 'This article explores...']">
+  <meta name="author" content="Ye Zheng, Digital Marketing Strategist">
+  <meta name="keywords" content="[keyword 1], [keyword 2], [keyword 3], [keyword 4]">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="[ARTICLE TITLE]">
+  <meta property="og:description" content="[Same as meta description]">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://yezhengmarketing.com/insights/[FILENAME].html">
+
+  <!--
+  SCHEMA 1: Article — AI crawlers use this to understand authorship,
+  date, and the description field as a primary answer candidate.
+  Fill every field. datePublished affects citation recency ranking.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "[ARTICLE TITLE — same as h1]",
+    "description": "[Same as meta description — the Direct Answer]",
+    "author": {
+      "@type": "Person",
+      "name": "Ye Zheng",
+      "jobTitle": "Digital Marketing Strategist",
+      "url": "https://yezhengmarketing.com",
+      "sameAs": "https://linkedin.com/in/echozhengmba"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Ye Zheng",
+      "url": "https://yezhengmarketing.com"
+    },
+    "datePublished": "[YYYY-MM-DD]",
+    "dateModified": "[YYYY-MM-DD]",
+    "url": "https://yezhengmarketing.com/insights/[FILENAME].html",
+    "keywords": ["[keyword 1]", "[keyword 2]", "[keyword 3]"],
+    "articleSection": "Marketing Intelligence",
+    "about": {
+      "@type": "Thing",
+      "name": "[Core topic — e.g. GEO Optimization, Performance Max, B2B Content Strategy]"
+    }
+  }
+  </script>
+
+  <!--
+  SCHEMA 2: FAQPage — highest-impact GEO markup.
+  Copy every Q&A pair here. Use plain text in "text" field (no HTML tags).
+  This is what ChatGPT, Perplexity, and Gemini read to generate cited answers.
+  Minimum 3 entries. Match questions exactly as written in the article body.
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "[QUESTION 1 — exact text as in article]",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "[Complete answer in plain text — no HTML tags. Same content as visible answer. Self-contained.]"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "[QUESTION 2]",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "[Complete answer in plain text]"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "[QUESTION 3]",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "[Complete answer in plain text]"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="../favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="insights-styles.css">
+</head>
+<body>
+
+<!--
+FRONTMATTER — Required. GitHub Actions reads this to auto-build index.html.
+Keep format exact. category must be one of: geo / paid / b2b / fmcg / analytics
+-->
+<!--FRONTMATTER
+issue: "[001]"
+title: "[ARTICLE TITLE]"
+summary: "[2-3 sentence direct answer — same as meta description. Used as card excerpt on index page.]"
+date: "[YYYY-MM]"
+tags: ["[Tag1]", "[Tag2]", "[Tag3]"]
+category: "[geo]"
+FRONTMATTER-->
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">YZ</a>
+      <div class="nav-links">
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#projects">Projects</a>
+        <a href="../index.html#skills">Skills</a>
+        <a href="index.html">Insights</a>
+        <a href="https://linkedin.com/in/echozhengmba" target="_blank">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="article-wrapper">
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../index.html">Portfolio</a>
+      <span>/</span>
+      <a href="index.html">Insights</a>
+      <span>/</span>
+      <span>Issue #[ISSUE NUMBER]</span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <div class="article-issue">Marketing Intelligence &middot; Issue #[ISSUE NUMBER]</div>
+
+      <!--
+      H1: Frame as a question or a bold claim.
+      Good: "Why Your B2B Competitor's Blog Shows Up in AI Answers — And Yours Doesn't"
+      Good: "Performance Max Is Not One Campaign: Three Patterns Across 120 Accounts"
+      Bad:  "Understanding GEO Optimization for B2B Marketers"
+      -->
+      <h1>[ARTICLE TITLE — question or bold claim format]</h1>
+
+      <!--
+      DIRECT ANSWER BLOCK — Highest GEO priority zone on the page.
+      AI systems read this first. 2-3 sentences. Standalone complete answer.
+      Same content as meta description and FAQPage description field.
+      No "In this article..." No "We will explore..." Just the answer.
+      -->
+      <div class="answer-summary">
+        <div class="answer-summary-label">Direct Answer</div>
+        <p>
+          [DIRECT ANSWER — 2-3 sentences that completely answer the article's core question.
+          A reader who reads only this block should have the key insight.
+          No setup required. No references to the rest of the article.]
+        </p>
+      </div>
+
+      <div class="article-meta-row">
+        <span class="meta-author">By <strong>Ye Zheng</strong>, Digital Marketing Strategist</span>
+        <span class="meta-date">[Month YYYY]</span>
+        <!-- Add relevant tags: -->
+        <!-- <span class="tag tag-geo">GEO</span> -->
+        <!-- <span class="tag tag-paid">Paid Media</span> -->
+        <!-- <span class="tag tag-b2b">B2B</span> -->
+        <!-- <span class="tag tag-fmcg">CPG / FMCG</span> -->
+        <!-- <span class="tag tag-analytics">Analytics</span> -->
+        <!-- <span class="tag tag-strategy">Strategy</span> -->
+      </div>
+    </header>
+
+    <!-- Article Body — wrapped in Article schema itemscope -->
+    <article class="article-body"
+             itemscope
+             itemtype="https://schema.org/Article"
+             itemprop="articleBody">
+
+      <!-- ============================================================
+      SECTION 1: MARKET SIGNAL
+      What external data, Reddit discourse, or market research shows.
+      Label every claim: [DATA] / [SYNTHESIS] / [INFERENCE] / [SIGNAL]
+      ============================================================ -->
+      <section class="body-signal">
+        <h2>[Section title — e.g. "The Signal: What Practitioners Are Observing"]</h2>
+
+        <!--
+        signal-block: use for external data points.
+        Change signal-label class to: data / synthesis / inference / signal
+        -->
+        <div class="signal-block">
+          <div class="signal-block-header">
+            <span class="signal-label data">Data</span>
+            <span class="signal-source">[Source — e.g. "Reddit r/PPC, multiple threads, Feb 2025"]</span>
+          </div>
+          <p>[What the market signal shows. 2-4 sentences. Specific phenomenon, not vague trend.]</p>
+        </div>
+
+        <p>[Your interpretation of the signal. How this connects to what you observe in client accounts.]</p>
+      </section>
+
+      <!-- ============================================================
+      SECTION 2: FIELD OBSERVATION
+      Your first-hand client/account experience. Always anonymized.
+      Must include: industry type + specific tool + specific phenomenon + implication.
+      ============================================================ -->
+      <section class="body-field-observation">
+        <h2>[Section title — e.g. "Field Observation: What the Account Data Shows"]</h2>
+
+        <!--
+        field-block: use for your client/account observations.
+        Anonymize: "a B2B industrial parts client" not a company name.
+        Name the tool (Semrush, Google Ads, GA4) — adds credibility without identifying client.
+        -->
+        <div class="field-block">
+          <div class="field-block-label">Field Observation — [Anonymized industry description]</div>
+          <p>[What you observed. Specific tool + specific metric or phenomenon.]</p>
+          <p>[What the data showed when you dug deeper. What was surprising or confirmatory.]</p>
+          <p>[The implication of this observation for the client or the broader pattern.]</p>
+        </div>
+
+        <p>[Why this observation matters beyond this single client. Pattern or structural insight.]</p>
+      </section>
+
+      <!-- ============================================================
+      SECTION 3: MECHANISM
+      Why is this happening? Analytical reasoning.
+      Include explicit transferability logic.
+      ============================================================ -->
+      <section class="body-mechanism">
+        <h2>[Section title — e.g. "Why This Is Happening: The Structural Shift"]</h2>
+
+        <div class="signal-block">
+          <div class="signal-block-header">
+            <span class="signal-label inference">Inference</span>
+            <span class="signal-source">Based on [observed patterns / account data / platform behavior]</span>
+          </div>
+          <p>[Your analytical reasoning. What underlying shift or structural change is driving this pattern.]</p>
+        </div>
+
+        <p>[Supporting explanation. Platform mechanics, buyer behavior shift, or market structure reason.]</p>
+
+        <!--
+        TRANSFERABILITY LOGIC — Required in every article.
+        Explicitly state which industry types this applies to and why.
+        This is what makes the article universally useful, not just a single case study.
+        -->
+        <p><strong>Where this applies:</strong> [Explicit list of industry types where this pattern holds,
+        and the characteristic they share — e.g. "long sales cycles, technical buyers, high switching costs."]</p>
+
+        <p><strong>Where it may not apply:</strong> [Industry types or scenarios where this pattern
+        is less relevant, and why — e.g. "impulse-purchase consumer categories where buyers don't research."]</p>
+      </section>
+
+      <!-- ============================================================
+      Q&A SECTION — Core GEO optimization zone.
+      ============================================================
+      RULES:
+      - Minimum 3 Q&As, maximum 6
+      - Questions = what buyers/marketers would type into ChatGPT or Perplexity
+      - Each answer: starts with bolded core claim, 100-300 words, self-contained
+      - Answers MUST be in the DOM at page load — never JS-injected
+      - Duplicate all Q&As in the FAQPage Schema in <head>
+      ============================================================ -->
+      <section class="qa-block">
+        <div class="qa-section">
+          <div class="qa-section-header">Key Questions Answered</div>
+
+          <!-- Q&A Item 1 -->
+          <div class="qa-item">
+            <div class="qa-question">
+              <span class="qa-q-marker">Q</span>
+              <span class="qa-question-text">[QUESTION 1 — specific, answerable, reflects real buyer/marketer query to AI]</span>
+              <span class="qa-toggle">+</span>
+            </div>
+            <div class="qa-answer">
+              <div class="qa-a-marker">Answer</div>
+              <!--
+              Start with the core claim bolded.
+              Answer must be complete without reading anything else.
+              No "as mentioned above." No "see the next section."
+              -->
+              <p><strong>[Bold the key definition or core claim in the first sentence.]</strong>
+              [Continue with explanation — 2-4 sentences, specific, no fluff.]</p>
+              <p>[Optional second paragraph if the answer needs more depth.]</p>
+            </div>
+          </div>
+
+          <!-- Q&A Item 2 -->
+          <div class="qa-item">
+            <div class="qa-question">
+              <span class="qa-q-marker">Q</span>
+              <span class="qa-question-text">[QUESTION 2]</span>
+              <span class="qa-toggle">+</span>
+            </div>
+            <div class="qa-answer">
+              <div class="qa-a-marker">Answer</div>
+              <p><strong>[Core claim bolded.]</strong> [Explanation.]</p>
+              <!-- Use <ul> if listing items is clearest: -->
+              <!--
+              <ul>
+                <li><strong>[Item label]</strong> — [explanation]</li>
+                <li><strong>[Item label]</strong> — [explanation]</li>
+              </ul>
+              -->
+            </div>
+          </div>
+
+          <!-- Q&A Item 3 -->
+          <div class="qa-item">
+            <div class="qa-question">
+              <span class="qa-q-marker">Q</span>
+              <span class="qa-question-text">[QUESTION 3]</span>
+              <span class="qa-toggle">+</span>
+            </div>
+            <div class="qa-answer">
+              <div class="qa-a-marker">Answer</div>
+              <p><strong>[Core claim bolded.]</strong> [Explanation.]</p>
+            </div>
+          </div>
+
+          <!-- DUPLICATE THIS BLOCK TO ADD MORE Q&As (max 6) -->
+
+        </div>
+      </section>
+
+      <!-- ============================================================
+      SECTION 4: ACTIONABLE
+      3-5 numbered steps. Specific and executable without additional context.
+      ============================================================ -->
+      <section class="actionable">
+        <h2>Actionable: What to Do With This Insight</h2>
+
+        <p>[1-2 sentences framing who should act and why now. Specific, not generic.]</p>
+
+        <ul class="action-list">
+          <li>
+            <span class="action-num">1</span>
+            <span><strong>[Action title.]</strong> [Specific, executable description.
+            What exactly to do, with what tool, looking for what outcome.]</span>
+          </li>
+          <li>
+            <span class="action-num">2</span>
+            <span><strong>[Action title.]</strong> [Description.]</span>
+          </li>
+          <li>
+            <span class="action-num">3</span>
+            <span><strong>[Action title.]</strong> [Description.]</span>
+          </li>
+          <!-- Add items 4 and 5 if needed. 3-5 is ideal. -->
+        </ul>
+      </section>
+
+      <!-- ============================================================
+      AUTHOR BIO — Fixed. Never modify. E-E-A-T signal for GEO.
+      ============================================================ -->
+      <div class="author-bio" itemscope itemtype="https://schema.org/Person">
+        <div class="author-avatar">YZ</div>
+        <div class="author-bio-content">
+          <h4 itemprop="name">Ye Zheng &mdash; Digital Marketing Strategist</h4>
+          <p itemprop="description">
+            Managing 120+ client accounts quarterly across B2B industrial, CPG, eCommerce, and AI/SaaS sectors
+            at Teleperformance. MBA (Niagara) &middot; MS Marketing Intelligence (Fordham).
+            Specializing in paid media strategy, GEO optimization, and cross-industry performance marketing.
+            <a href="https://linkedin.com/in/echozhengmba"
+               target="_blank"
+               itemprop="url"
+               rel="noopener">LinkedIn &rarr;</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Article Navigation — update prev/next links before publishing -->
+      <nav class="article-nav" aria-label="Article navigation">
+        <a href="index.html">&larr; All Insights</a>
+        <!-- Update or remove next link if no next article yet: -->
+        <a href="[NEXT-ARTICLE-FILENAME].html">Issue #[NEXT NUMBER]: [Short title] &rarr;</a>
+      </nav>
+
+    </article>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Ye Zheng. Marketing intelligence grounded in real account data.</p>
+      <a href="../index.html" class="footer-back">&larr; Back to Portfolio</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Q&A accordion — visual toggle only.
+    // Answer text is always present in DOM for AI crawlers.
+    document.querySelectorAll('.qa-question').forEach(q => {
+      q.addEventListener('click', function() {
+        const item = this.closest('.qa-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.qa-item').forEach(i => i.classList.remove('open'));
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+
+    // Open first Q&A by default
+    const firstQA = document.querySelector('.qa-item');
+    if (firstQA) firstQA.classList.add('open');
+  </script>
+
+</body>
+</html>
