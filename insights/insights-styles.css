@@ -788,3 +788,268 @@ footer {
   .article-nav { flex-direction: column; align-items: flex-start; }
   .nav-links { gap: 1.25rem; }
 }
+
+
+/* ============================================
+   ARTICLE PAGE STYLES — PATCH
+   Append to end of insights-styles.css
+   ============================================ */
+
+/* Article page body */
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', 'Roboto', sans-serif;
+  line-height: 1.7;
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Article Header ── */
+.article-header {
+  margin-bottom: 2.5rem;
+}
+
+.issue-label {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--google-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.85rem;
+}
+
+.article-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Direct Answer Block ── */
+.direct-answer {
+  background: var(--google-blue-light);
+  border-left: 3px solid var(--google-blue);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.direct-answer p {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Article Meta Row ── */
+.article-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.article-meta time {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-disabled);
+}
+
+.article-meta .tags {
+  color: var(--text-disabled);
+  font-size: 0.75rem;
+}
+
+/* ── Section Base ── */
+.body-signal,
+.body-field-observation,
+.body-mechanism,
+.qa-block,
+.actionable,
+.author-bio {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.body-signal h2,
+.body-field-observation h2,
+.body-mechanism h2,
+.qa-block h2,
+.actionable h2,
+.author-bio h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.1rem;
+}
+
+.body-signal p,
+.body-field-observation p,
+.body-mechanism p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.body-signal p:last-child,
+.body-field-observation p:last-child,
+.body-mechanism p:last-child {
+  margin-bottom: 0;
+}
+
+.body-signal strong,
+.body-field-observation strong,
+.body-mechanism strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* ── Q&A Block (static — GEO: answers always in DOM) ── */
+.qa-block h2 {
+  margin-bottom: 1.35rem;
+}
+
+.qa-item {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.qa-item h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.5;
+  padding: 1rem 1.35rem;
+  background: var(--bg-secondary);
+  margin: 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.qa-answer {
+  padding: 1rem 1.35rem;
+  background: var(--bg-elevated);
+  display: block; /* always visible — GEO requirement */
+}
+
+.qa-answer p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 0.7rem;
+}
+
+.qa-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.qa-answer strong {
+  color: var(--text-primary);
+}
+
+/* ── Actionable Section ── */
+.actionable ol {
+  padding-left: 1.35rem;
+  counter-reset: none;
+}
+
+.actionable li {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  padding-left: 0.35rem;
+}
+
+.actionable li strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* ── Author Bio ── */
+.author-bio {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  border: 1px solid var(--border-subtle);
+  border-bottom: none;
+  margin-bottom: 2rem;
+}
+
+.author-bio h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-disabled);
+  margin-bottom: 0.75rem;
+}
+
+.author-bio p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.author-bio a {
+  color: var(--google-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.author-bio a:hover {
+  color: var(--google-blue-hover);
+}
+
+/* ── Article Nav ── */
+.article-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+}
+
+.article-nav a {
+  font-size: 0.85rem;
+  color: var(--google-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.article-nav a:hover {
+  color: var(--google-blue-hover);
+}
+
+/* ── Signal Label Badges ── */
+.body-signal p,
+.body-field-observation p,
+.body-mechanism p,
+.qa-answer p {
+  /* [DATA] [SYNTHESIS] [INFERENCE] [SIGNAL] labels render inline naturally */
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .article-header h1 { font-size: 1.5rem; }
+  main { padding: 1.25rem 1rem 3rem; }
+  .article-nav { flex-direction: column; align-items: flex-start; }
+  .author-bio { padding: 1.1rem; }
+}
