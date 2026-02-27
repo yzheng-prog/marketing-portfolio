@@ -1,7 +1,8 @@
 User-agent: *
 Allow: /
+Sitemap: https://yezhengmarketing.com/sitemap.xml
 
-# AI Crawlers - explicitly allowed
+# AI Crawlers - explicitly allowed for GEO indexing
 User-agent: GPTBot
 Allow: /
 
@@ -20,4 +21,8 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://yezhengmarketing.com/sitemap.xml
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
