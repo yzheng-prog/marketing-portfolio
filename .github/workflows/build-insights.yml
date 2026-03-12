@@ -45,9 +45,7 @@ jobs:
           for filename in sorted(os.listdir(insights_dir), reverse=True):
               if not filename.endswith('.html'):
                   continue
-              if not filename[0].isdigit():
-                  continue
-
+      
               filepath = os.path.join(insights_dir, filename)
               with open(filepath, 'r', encoding='utf-8') as f:
                   content = f.read()
