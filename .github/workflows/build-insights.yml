@@ -45,7 +45,9 @@ jobs:
           for filename in sorted(os.listdir(insights_dir), reverse=True):
               if not filename.endswith('.html'):
                   continue
-      
+              if filename == 'index.html':
+                  continue
+    
               filepath = os.path.join(insights_dir, filename)
               with open(filepath, 'r', encoding='utf-8') as f:
                   content = f.read()
