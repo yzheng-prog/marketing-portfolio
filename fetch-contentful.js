@@ -133,7 +133,7 @@ FRONTMATTER-->`;
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="..insights-styles.css">
+  <link rel="stylesheet" href="insights-styles.css">
 </head>
 <body>
   ${frontmatter}
