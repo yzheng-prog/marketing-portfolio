@@ -446,7 +446,7 @@ class PixelAIAssistant {
     }
 
     init() {
-        setTimeout(() => { this.createAssistant(); this.show(); }, 30000);
+        setTimeout(() => { this.createAssistant(); this.show(); }, 5000);
     }
 
     createAssistant() {
