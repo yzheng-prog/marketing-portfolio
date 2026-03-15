@@ -31,7 +31,7 @@ class EasterEggManager {
             if (!this.easterEggActivated) {
                 this.showLongVisitorMessage();
             }
-        }, 30000); // 30 seconds
+        }, 5000); // 5 seconds
     }
 
     handleKonami(e) {
